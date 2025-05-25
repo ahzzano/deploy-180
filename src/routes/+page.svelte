@@ -1,15 +1,7 @@
 <script lang="ts">
-    import { fade } from "svelte/transition";
+    import ModelResults from "../components/ModelResults.svelte";
 </script>
 
-<!-- <div class="card bg-base-200 shadow-sm rounded-box">
-    <div class="card-body">
-        <span class="card-title">Banana Leaf Classifier</span>
-        Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptatum, nulla
-        est. Quam, distinctio corrupti sed saepe explicabo molestias totam minus
-        alias hic eligendi modi provident atque reprehenderit, magni dolores pariatur!
-    </div>
-</div> -->
 <div class="hero">
     <div class="hero-content text-center">
         <div class="max-w-md">
@@ -40,29 +32,9 @@
         <p>Here are the models showcased in our presentation</p>
         <div class="join join-vertical">
             <!-- svelte-ignore a11y_no_noninteractive_tabindex -->
-            <div
-                class="collapse collapse-arrow border border-base-300 join-item"
-                tabindex="0"
-            >
-                <span class="collapse-title font-semibold">EfficientNet</span>
-                <div class="collapse-content">Hello World!</div>
-            </div>
-            <!-- svelte-ignore a11y_no_noninteractive_tabindex -->
-            <div
-                class="collapse collapse-arrow border border-base-300 join-item"
-                tabindex="0"
-            >
-                <span class="collapse-title font-semibold">VGG19 + kNN</span>
-                <div class="collapse-content">Bruh</div>
-            </div>
-            <!-- svelte-ignore a11y_no_noninteractive_tabindex -->
-            <div
-                class="collapse collapse-arrow border border-base-300 join-item"
-                tabindex="0"
-            >
-                <span class="collapse-title font-semibold">SqueezeNet</span>
-                <div class="collapse-content">Bruh</div>
-            </div>
+            <ModelResults modelName={"eff_net"} title={"EfficientNet"} />
+            <ModelResults modelName={"cnnknn"} title={"VGG19 + kNN"} />
+            <ModelResults modelName={"squeezenet"} title={"SqueezeNet"} />
         </div>
     </div>
 </div>
