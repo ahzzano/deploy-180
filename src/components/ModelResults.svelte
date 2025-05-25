@@ -18,7 +18,11 @@
         <div class="mt-4 flex flex-col gap-8">
             <span>Try our Model</span>
             {#if !isPredicting && prediction != null}
-                <div class="alert alert-info" transition:slide>
+                <div
+                    role="alert"
+                    class="alert text-green-700 bg-green-300 border-green-300"
+                    transition:slide
+                >
                     <svg
                         xmlns="http://www.w3.org/2000/svg"
                         class="h-6 w-6 shrink-0 stroke-current"
