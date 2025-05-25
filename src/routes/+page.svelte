@@ -1,5 +1,7 @@
 <script lang="ts">
     import ModelResults from "../components/ModelResults.svelte";
+    const { data } = $props();
+    console.log(data);
 </script>
 
 <div class="hero">
@@ -32,9 +34,16 @@
         <p>Here are the models showcased in our presentation</p>
         <div class="join join-vertical">
             <!-- svelte-ignore a11y_no_noninteractive_tabindex -->
-            <ModelResults modelName={"eff_net"} title={"EfficientNet"} />
-            <ModelResults modelName={"cnnknn"} title={"VGG19 + kNN"} />
-            <ModelResults modelName={"squeezenet"} title={"SqueezeNet"} />
+            <ModelResults
+                title={"VGG19 + kNN"}
+                route={"vgg19knn"}
+                prediction={data.predictions.vgg19knn}
+            />
+            <ModelResults
+                title={"SqueezeNet"}
+                route={"squeezenet"}
+                prediction={data.predictions.squeezenet}
+            />
         </div>
     </div>
 </div>
