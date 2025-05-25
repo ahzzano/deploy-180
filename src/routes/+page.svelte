@@ -1,15 +1,29 @@
 <script lang="ts"></script>
 
-<div class="card bg-base-200 shadow-sm">
+<!-- <div class="card bg-base-200 shadow-sm rounded-box">
     <div class="card-body">
         <span class="card-title">Banana Leaf Classifier</span>
         Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptatum, nulla
         est. Quam, distinctio corrupti sed saepe explicabo molestias totam minus
         alias hic eligendi modi provident atque reprehenderit, magni dolores pariatur!
     </div>
+</div> -->
+<div class="hero">
+    <div class="hero-content text-center">
+        <div class="max-w-md">
+            <h1 class="text-5xl font-bold">Banana Leaf Classifier</h1>
+            <p>
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. In,
+                dolor possimus quos maiores neque animi. Laudantium
+                perspiciatis, unde provident enim modi, at nemo dolorum neque
+                suscipit soluta ab quis molestias.
+            </p>
+            <button class="btn btn-primary">Get Started</button>
+        </div>
+    </div>
 </div>
 
-<div class="card bg-base-200 shadow-sm">
+<div class="card bg-base-200 shadow-sm rounded-box">
     <div class="card-body">
         <span class="card-title">About</span>
         lorem ipsum dolor sit amet consectetur adipisicing elit. voluptatum, nulla
@@ -19,29 +33,13 @@
 </div>
 
 <div class="card bg-base-200 shadow-sm">
-    <div class="card-body">
+    <div class="card-body rounded-box">
         <span class="card-title">Models</span>
         <p>Here are the models presented in our presentation</p>
         <div class="join join-vertical">
-            <div
-                class="collapse collapse-arrow join-item border-base-300 border"
-            >
-                <input type="radio" name="my-accordion-4" checked={true} />
-                <div class="collapse-title font-semibold">EfficientNet</div>
-                <div class="collapse-content text-sm">
-                    Click the "Sign Up" button in the top right corner and
-                    follow the registration process.
-                </div>
-            </div>
-            <div
-                class="collapse collapse-arrow join-item border-base-300 border"
-            >
-                <input type="radio" name="my-accordion-4" />
-                <div class="collapse-title font-semibold">VGG19 + kNN</div>
-                <div class="collapse-content text-sm">
-                    Click the "Sign Up" button in the top right corner and
-                    follow the registration process.
-                </div>
+            <div class="collapse">
+                <span class="collapse-title">EfficientNet</span>
+                <div class="collapse-content">Hello World!</div>
             </div>
         </div>
     </div>
