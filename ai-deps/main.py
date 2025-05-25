@@ -17,7 +17,7 @@ file = open('vgg19_knn/knn.pkl', 'rb')
 knn = pickle.load(file)
 file.close()
 
-class_names = ['cordana', 'healthy', 'pestalotiopsis', 'sigatoka']
+class_names = ['Cordana', 'Healthy', 'Pestalotiopsis', 'Sigatoka']
 
 
 @app.post("/squeezenet")
