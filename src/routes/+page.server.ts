@@ -1,26 +1,30 @@
 import { fail, type Actions } from "@sveltejs/kit";
 import * as tf from "@tensorflow/tfjs"
+import type { PageServerLoad } from "./$types";
+
+const predictions = {
+    vgg19knn: null,
+    squeezenet: null
+}
+
+export const load: PageServerLoad = async () => {
+    console.log(predictions)
+    return {
+        predictions: predictions
+    }
+}
 
 export const actions = {
-    upload_input: async ({ request }) => {
+    vgg19knn: async ({ request }) => {
+
         const formData = await request.formData()
-        const targetModel = formData.get('model')
-        let targetUrl = 'squeezenet'
 
-        if (!targetModel) {
-            return fail(400, { message: "no model found" })
-        }
-
-        if (targetModel == "cnnknn") {
-            targetUrl = '/vgg19knn'
-        }
-
-        const response = await fetch(`http://localhost:8000/${targetUrl}`, {
+        const response = await fetch("http://localhost:8000/vgg19knn", {
             method: "POST",
             body: formData
         })
-        console.log(await response.json())
-        return { success: true, results: response.json() }
+        const results = await response.json()
+        predictions.vgg19knn = results.prediction
+        return { success: true }
     }
-
 } satisfies Actions;
