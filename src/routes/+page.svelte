@@ -1,3 +1,3 @@
 <script lang="ts"></script>
 
-<div></div>
+<div class="nav"></div>
