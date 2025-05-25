@@ -41,5 +41,8 @@
 		"onlyBuiltDependencies": [
 			"esbuild"
 		]
+	},
+	"dependencies": {
+		"@tensorflow/tfjs": "^4.22.0"
 	}
 }
