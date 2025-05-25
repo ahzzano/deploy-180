@@ -1,13 +1,12 @@
 <script lang="ts">
     import ModelResults from "../components/ModelResults.svelte";
     const { data } = $props();
-    console.log(data);
 </script>
 
 <div class="hero">
     <div class="hero-content text-center">
         <div class="max-w-md">
-            <h1 class="text-5xl font-bold">Banana Leaf Classifier</h1>
+            <h1 class="text-5xl font-bold">Banana Leaf Disease Classifier</h1>
             <p class="mt-2">
                 Lorem ipsum dolor sit amet consectetur adipisicing elit. In,
                 dolor possimus quos maiores neque animi. Laudantium
@@ -22,9 +21,10 @@
 <div class="card bg-base-200 shadow-sm rounded-box">
     <div class="card-body">
         <span class="card-title">About</span>
-        lorem ipsum dolor sit amet consectetur adipisicing elit. voluptatum, nulla
-        est. quam, distinctio corrupti sed saepe explicabo molestias totam minus
-        alias hic eligendi modi provident atque reprehenderit, magni dolores pariatur!
+        <p>
+            Here is our final project for the course of CS 180 for A.Y.
+            2024-2025
+        </p>
     </div>
 </div>
 
