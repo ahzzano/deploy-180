@@ -17,6 +17,9 @@ file = open('vgg19_knn/knn.pkl', 'rb')
 knn = pickle.load(file)
 file.close()
 
+class_names = ['cordana', 'healthy', 'pestalotiopsis', 'sigatoka']
+
+
 @app.post("/squeezenet")
 async def squeezenet_prediction(file: UploadFile = File(...)):
     img = Image.open(io.BytesIO(await file.read())).resize((224,224))
@@ -36,7 +39,7 @@ async def vgg19knn_prediction(file: UploadFile = File(...)):
     arr = np.array(img).astype(np.float32) / 255
 
     image_np = np.expand_dims(arr, axis=0).astype(np.float32)
-
     features = vgg19.predict(image_np, verbose=0)
     prediction = knn.predict(features)
-    return {"message": "volveran hermanos", "prediction": int(prediction[0])}
+    knn_class = class_names[prediction[0]]
+    return { "prediction": knn_class}
