@@ -4,7 +4,7 @@ import type { PageServerLoad } from "./$types";
 
 const predictions = {
     vgg19knn: null,
-    squeezenet: null
+    cosine: null
 }
 
 export const load: PageServerLoad = async () => {
@@ -25,6 +25,18 @@ export const actions = {
         })
         const results = await response.json()
         predictions.vgg19knn = results.prediction
+        return { success: true }
+    },
+    cosine: async ({ request }) => {
+
+        const formData = await request.formData()
+
+        const response = await fetch("http://localhost:8000/cosine", {
+            method: "POST",
+            body: formData
+        })
+        const results = await response.json()
+        predictions.cosine = results.prediction
         return { success: true }
     }
 } satisfies Actions;

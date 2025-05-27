@@ -7,12 +7,7 @@
     <div class="hero-content text-center">
         <div class="max-w-md">
             <h1 class="text-5xl font-bold">Banana Leaf Disease Classifier</h1>
-            <p class="mt-2">
-                Lorem ipsum dolor sit amet consectetur adipisicing elit. In,
-                dolor possimus quos maiores neque animi. Laudantium
-                perspiciatis, unde provident enim modi, at nemo dolorum neque
-                suscipit soluta ab quis molestias.
-            </p>
+            <p class="mt-2">Predicting the health of a Banana Leaf with AI</p>
             <button class="btn btn-primary">Get Started</button>
         </div>
     </div>
@@ -40,9 +35,9 @@
                 prediction={data.predictions.vgg19knn}
             />
             <ModelResults
-                title={"SqueezeNet"}
-                route={"squeezenet"}
-                prediction={data.predictions.squeezenet}
+                title={"Warmup + Cosine"}
+                route={"cosine"}
+                prediction={data.predictions.cosine}
             />
         </div>
     </div>
